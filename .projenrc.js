@@ -7,6 +7,8 @@ const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
 const project = new AwsCdkConstructLibrary({
   authorName: 'Pahud Hsieh',
   authorEmail: 'pahudnet@gmail.com',
+  authorUrl: 'https://github.com/pahud',
+  authorOrganization: true,
   name: PROJECT_NAME,
   description: PROJECT_DESCRIPTION,
   repository: 'https://github.com/pahud/cdk-spot-one.git',
@@ -17,6 +19,7 @@ const project = new AwsCdkConstructLibrary({
   },
   defaultReleaseBranch: 'main',
   depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+    ignoreProjen: false,
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
       secret: AUTOMATION_TOKEN,
