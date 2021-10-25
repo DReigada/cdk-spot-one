@@ -16,7 +16,6 @@ const project = new AwsCdkConstructLibrary({
     twitter: 'pahudnet',
     announce: false,
   },
-  minNodeVersion: '12.20.0',
   defaultReleaseBranch: 'main',
   cdkVersion: '1.77.0',
   cdkDependencies: [
