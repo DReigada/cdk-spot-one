@@ -23,6 +23,10 @@
       "type": "build"
     },
     {
+      "name": "aws-cdk",
+      "type": "build"
+    },
+    {
       "name": "eslint",
       "type": "build"
     },
@@ -83,6 +87,10 @@
     },
     {
       "name": "ts-jest",
+      "type": "build"
+    },
+    {
+      "name": "ts-node",
       "type": "build"
     },
     {

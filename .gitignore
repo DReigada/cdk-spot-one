@@ -48,6 +48,7 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
+!/cdk.json
 !/.gitpod.yml
 cdk.out
 cdk.context.json

@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary, DevEnvironmentDockerImage, Gitpod } = require('projen');
+const { AwsCdkConstructLibrary, DevEnvironmentDockerImage, Gitpod, JsonFile } = require('projen');
 
 const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
 
@@ -26,6 +26,10 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/core',
     '@aws-cdk/custom-resources',
   ],
+  devDeps: [
+    'aws-cdk',
+    'ts-node',
+  ],
   depsUpgradeOptions: {
     ignoreProjen: false,
     workflowOptions: {
@@ -47,6 +51,12 @@ project.package.addField('resolutions', {
   'pac-resolver': '^5.0.0',
   'set-value': '^4.0.1',
   'ansi-regex': '^5.0.1',
+});
+
+new JsonFile(project, 'cdk.json', {
+  obj: {
+    app: 'npx ts-node --prefer-ts-exts src/integ.default.ts',
+  },
 });
 
 

@@ -17,22 +17,17 @@ export class IntegTesting {
     const stackName = app.node.tryGetContext('stackName') || 'SpotOneStack';
     const stack = new cdk.Stack(app, stackName, { env });
 
-    const instanceType = stack.node.tryGetContext('instance_type') || 't3.large';
-    const eipAllocationId = stack.node.tryGetContext('eip_allocation_id');
-    const volumeSize = stack.node.tryGetContext('volume_size') || 60;
     const keyName = stack.node.tryGetContext('ssh_key_name');
     const vpc = VpcProvider.getOrCreate(stack);
 
-    const spot = new SpotInstance(stack, 'SpotInstance', {
+    const spot = new SpotInstance(stack, 'SpotInstanceUbuntu', {
       vpc,
-      // instanceInterruptionBehavior: InstanceInterruptionBehavior.STOP,
-      eipAllocationId: eipAllocationId,
-      assignEip: false,
-      defaultInstanceType: new InstanceType(instanceType),
+      customAmiId: 'ami-076d8ebdd0e1ec091', //ubuntu ami id.
+      defaultInstanceType: new InstanceType('t4g.medium'),
       keyName,
-      ebsVolumeSize: volumeSize,
+      blockDeviceMappings: [{ deviceName: '/dev/sda1', ebs: { volumeSize: 20 } }],
+      additionalUserData: ['curl -fsSL https://get.docker.com -o get-docker.sh', 'sudo sh get-docker.sh'],
     });
-
     new cdk.CfnOutput(stack, 'InstnaceId', { value: spot.instanceId! });
 
     this.stack = [stack];
