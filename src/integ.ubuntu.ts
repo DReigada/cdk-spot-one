@@ -1,6 +1,6 @@
 import { InstanceType } from '@aws-cdk/aws-ec2';
 import * as cdk from '@aws-cdk/core';
-import { AmiOSType, amiFinder } from './ami-helper';
+import { AmazonMachineImage } from './ami-helper';
 import { VpcProvider, SpotInstance } from './spot';
 
 export class IntegTesting {
@@ -23,7 +23,7 @@ export class IntegTesting {
 
     const spot = new SpotInstance(stack, 'SpotInstanceUbuntu', {
       vpc,
-      customAmiId: amiFinder(AmiOSType.UBUNTU_20_04_ARM64).getImage(stack).imageId,
+      customAmiId: AmazonMachineImage.UBUNTU_20_04_ARM64.getImage(stack).imageId,
       defaultInstanceType: new InstanceType('t4g.medium'),
       keyName,
       blockDeviceMappings: [{ deviceName: '/dev/sda1', ebs: { volumeSize: 20 } }],

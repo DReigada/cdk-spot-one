@@ -4,6 +4,7 @@
 
 Name|Description
 ----|-----------
+[AmazonMachineImage](#cdk-spot-one-amazonmachineimage)|*No description*
 [LaunchTemplate](#cdk-spot-one-launchtemplate)|*No description*
 [LaunchTemplateResource](#cdk-spot-one-launchtemplateresource)|*No description*
 [SpotFleet](#cdk-spot-one-spotfleet)|*No description*
@@ -35,10 +36,62 @@ Name|Description
 
 Name|Description
 ----|-----------
-[AmiOSType](#cdk-spot-one-amiostype)|*No description*
 [BlockDuration](#cdk-spot-one-blockduration)|*No description*
 [InstanceInterruptionBehavior](#cdk-spot-one-instanceinterruptionbehavior)|*No description*
 [NodeType](#cdk-spot-one-nodetype)|Whether the worker nodes should support GPU or just standard instances.
+
+
+
+## class AmazonMachineImage  <a id="cdk-spot-one-amazonmachineimage"></a>
+
+
+
+
+### Initializer
+
+
+
+
+```ts
+new AmazonMachineImage()
+```
+
+
+
+
+### Properties
+
+
+Name | Type | Description 
+-----|------|-------------
+*static* **AMAZON_LINUX** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
+*static* **AMAZON_LINUX_2** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
+*static* **CENTOS_7** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
+*static* **CENTOS_8** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_16_04_AMD64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_16_04_ARM64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_18_04_AMD64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_18_04_ARM64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_20_04_AMD64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_20_04_ARM64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_20_10_AMD64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_20_10_ARM64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
+
+### Methods
+
+
+#### *static* fromSsmParameter(path) <a id="cdk-spot-one-amazonmachineimage-fromssmparameter"></a>
+
+
+
+```ts
+static fromSsmParameter(path: string): IMachineImage
+```
+
+* **path** (<code>string</code>)  *No description*
+
+__Returns__:
+* <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code>
 
 
 
@@ -578,26 +631,6 @@ Name | Type | Description
 **vpc**? | <code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code> | VPC for the spot fleet.<br/>__*Default*__: new VPC will be created
 **vpcSubnet**? | <code>[SubnetSelection](#aws-cdk-aws-ec2-subnetselection)</code> | VPC subnet for the spot fleet.<br/>__*Default*__: public subnet
 
-
-
-## enum AmiOSType  <a id="cdk-spot-one-amiostype"></a>
-
-
-
-Name | Description
------|-----
-**UBUNTU_16_04_AMD64** |Ubuntu 16.04 AMD64 ami.
-**UBUNTU_16_04_ARM64** |Ubuntu 16.04 ARM64 ami.
-**UBUNTU_18_04_AMD64** |Ubuntu 18.04 AMD64 ami.
-**UBUNTU_18_04_ARM64** |Ubuntu 18.04 ARM64 ami.
-**UBUNTU_20_04_AMD64** |Ubuntu 20.04 AMD64 ami.
-**UBUNTU_20_04_ARM64** |Ubuntu 20.04 ARM64 ami.
-**UBUNTU_20_10_AMD64** |Ubuntu 20.10 AMD64 ami.
-**UBUNTU_20_10_ARM64** |Ubuntu 20.10 ARM64 ami.
-**CENTOS_7** |CentOS 7 ami.
-**CENTOS_8** |CentOS 8 ami.
-**AMAZON_LINUX_2** |Amazon Linux 2 ami.
-**AMAZON_LINUX** |Amazon Linux  ami.
 
 
 ## enum BlockDuration  <a id="cdk-spot-one-blockduration"></a>
