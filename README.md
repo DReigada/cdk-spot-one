@@ -114,7 +114,19 @@ defaultInstanceType: new InstanceType('c6g.large')
 
 See https://github.com/pahud/cdk-spot-one/issues/270#issuecomment-877152685
 
-# SSH connect
+# Connect with Session Manager(recommended)
+
+You may connect to the spot instance with [Session Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-sessions-start.html).
+
+```sh
+# make sure you have installed session-manager-plugin
+$ session-manager-plugin
+# start session
+$ aws ssm start-session --target INSTANCE_ID
+```
+
+
+# Connect with EC2 SSH Connect
 
 By default the `cdk-spot-one` does not bind any SSH public key for you on the instance. You are encouraged to use `ec2-instance-connect` to send your public key from local followed by one-time SSH connect.
 
