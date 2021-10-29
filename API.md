@@ -35,6 +35,7 @@ Name|Description
 
 Name|Description
 ----|-----------
+[AmiOSType](#cdk-spot-one-amiostype)|*No description*
 [BlockDuration](#cdk-spot-one-blockduration)|*No description*
 [InstanceInterruptionBehavior](#cdk-spot-one-instanceinterruptionbehavior)|*No description*
 [NodeType](#cdk-spot-one-nodetype)|Whether the worker nodes should support GPU or just standard instances.
@@ -577,6 +578,26 @@ Name | Type | Description
 **vpc**? | <code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code> | VPC for the spot fleet.<br/>__*Default*__: new VPC will be created
 **vpcSubnet**? | <code>[SubnetSelection](#aws-cdk-aws-ec2-subnetselection)</code> | VPC subnet for the spot fleet.<br/>__*Default*__: public subnet
 
+
+
+## enum AmiOSType  <a id="cdk-spot-one-amiostype"></a>
+
+
+
+Name | Description
+-----|-----
+**UBUNTU_16_04_AMD64** |Ubuntu 16.04 AMD64 ami.
+**UBUNTU_16_04_ARM64** |Ubuntu 16.04 ARM64 ami.
+**UBUNTU_18_04_AMD64** |Ubuntu 18.04 AMD64 ami.
+**UBUNTU_18_04_ARM64** |Ubuntu 18.04 ARM64 ami.
+**UBUNTU_20_04_AMD64** |Ubuntu 20.04 AMD64 ami.
+**UBUNTU_20_04_ARM64** |Ubuntu 20.04 ARM64 ami.
+**UBUNTU_20_10_AMD64** |Ubuntu 20.10 AMD64 ami.
+**UBUNTU_20_10_ARM64** |Ubuntu 20.10 ARM64 ami.
+**CENTOS_7** |CentOS 7 ami.
+**CENTOS_8** |CentOS 8 ami.
+**AMAZON_LINUX_2** |Amazon Linux 2 ami.
+**AMAZON_LINUX** |Amazon Linux  ami.
 
 
 ## enum BlockDuration  <a id="cdk-spot-one-blockduration"></a>
