@@ -3,16 +3,19 @@ import * as ec2 from '@aws-cdk/aws-ec2';
 export class AmazonMachineImage {
   public static readonly AMAZON_LINUX = ec2.MachineImage.latestAmazonLinux();
   public static readonly AMAZON_LINUX_2 = ec2.MachineImage.latestAmazonLinux( { generation: ec2.AmazonLinuxGeneration.AMAZON_LINUX_2 });
+  /**
+   * CentOS product code from https://wiki.centos.org/Cloud/AWS
+   */
   public static readonly CENTOS_7 = ec2.MachineImage.lookup({
     filters: {
-      ['product-code']: ['aw0evgkw8e5c1q413zgy5pjce'],
+      ['product-code']: ['cvugziknvmxgqna9noibqnnsy'],
     },
     name: '*CentOS*',
     owners: ['aws-marketplace'],
   });
   public static readonly CENTOS_8 = ec2.MachineImage.lookup({
     filters: {
-      ['product-code']: ['aw0evgkw8e5c1q413zgy5pjce'],
+      ['product-code']: ['47k9ia2igxpcce2bzo8u3kj03'],
     },
     name: '*CentOS*',
     owners: ['aws-marketplace'],

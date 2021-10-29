@@ -66,7 +66,7 @@ Name | Type | Description
 -----|------|-------------
 *static* **AMAZON_LINUX** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
 *static* **AMAZON_LINUX_2** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
-*static* **CENTOS_7** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
+*static* **CENTOS_7** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | CentOS product code from https://wiki.centos.org/Cloud/AWS.
 *static* **CENTOS_8** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
 *static* **UBUNTU_16_04_AMD64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
 *static* **UBUNTU_16_04_ARM64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
