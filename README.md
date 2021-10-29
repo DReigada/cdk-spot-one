@@ -46,7 +46,7 @@ Scenario: To ensure the availability with no disruption with defined period up t
 ## SpotInstance
 
 ```ts
-import { SpotInstance } from 'cdk-spot-one';
+import { SpotInstance, AmiOSType, amiFinder } from 'cdk-spot-one';
 
 // Default use Amazon Linux 2
 new SpotInstance(stack, 'SpotInstance');
@@ -55,7 +55,7 @@ new SpotInstance(stack, 'SpotInstance');
 // Custom Id use Ubuntu 20.04 Arm64 Server.
 new SpotInstance(stack, 'SpotInstanceUbuntu', {
       vpc,
-      customAmiId: 'ami-076d8ebdd0e1ec091', //ubuntu ami id.
+      customAmiId: amiFinder(AmiOSType.UBUNTU_20_04_ARM64).getImage(stack).imageId,
       defaultInstanceType: new InstanceType('t4g.medium'),
       keyName,
       blockDeviceMappings: [{ deviceName: '/dev/sda1', ebs: { volumeSize: 20 } }],
