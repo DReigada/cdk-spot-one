@@ -20,14 +20,14 @@ export class AmazonMachineImage {
     name: '*CentOS*',
     owners: ['aws-marketplace'],
   });
-  public static readonly UBUNTU_16_04_AMD64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/16.04/stable/current/amd64/hvm/ebs-gp2/ami-id')
-  public static readonly UBUNTU_16_04_ARM64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/16.04/stable/current/arm64/hvm/ebs-gp2/ami-id')
-  public static readonly UBUNTU_18_04_AMD64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/18.04/stable/current/amd64/hvm/ebs-gp2/ami-id')
-  public static readonly UBUNTU_18_04_ARM64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/18.04/stable/current/arm64/hvm/ebs-gp2/ami-id')
-  public static readonly UBUNTU_20_04_AMD64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/20.04/stable/current/amd64/hvm/ebs-gp2/ami-id')
-  public static readonly UBUNTU_20_04_ARM64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/20.04/stable/current/arm64/hvm/ebs-gp2/ami-id')
-  public static readonly UBUNTU_20_10_AMD64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/20.10/stable/current/amd64/hvm/ebs-gp2/ami-id')
-  public static readonly UBUNTU_20_10_ARM64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/20.10/stable/current/arm64/hvm/ebs-gp2/ami-id')
+  public static readonly UBUNTU_16_04_AMD64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/16.04/stable/current/amd64/hvm/ebs-gp2/ami-id');
+  public static readonly UBUNTU_16_04_ARM64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/16.04/stable/current/arm64/hvm/ebs-gp2/ami-id');
+  public static readonly UBUNTU_18_04_AMD64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/18.04/stable/current/amd64/hvm/ebs-gp2/ami-id');
+  public static readonly UBUNTU_18_04_ARM64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/18.04/stable/current/arm64/hvm/ebs-gp2/ami-id');
+  public static readonly UBUNTU_20_04_AMD64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/20.04/stable/current/amd64/hvm/ebs-gp2/ami-id');
+  public static readonly UBUNTU_20_04_ARM64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/20.04/stable/current/arm64/hvm/ebs-gp2/ami-id');
+  public static readonly UBUNTU_20_10_AMD64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/20.10/stable/current/amd64/hvm/ebs-gp2/ami-id');
+  public static readonly UBUNTU_20_10_ARM64 = AmazonMachineImage.fromSsmParameter('/aws/service/canonical/ubuntu/server/20.10/stable/current/arm64/hvm/ebs-gp2/ami-id');
   public static fromSsmParameter(path: string): ec2.IMachineImage {
     return ec2.MachineImage.fromSsmParameter(path);
   }
