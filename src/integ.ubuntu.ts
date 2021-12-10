@@ -1,5 +1,5 @@
-import { InstanceType } from '@aws-cdk/aws-ec2';
-import * as cdk from '@aws-cdk/core';
+import { aws_ec2 as ec2 } from 'aws-cdk-lib';
+import * as cdk from 'aws-cdk-lib';
 import { AmazonMachineImage } from './ami-helper';
 import { VpcProvider, SpotInstance } from './spot';
 
@@ -24,7 +24,7 @@ export class IntegTesting {
     const spot = new SpotInstance(stack, 'SpotInstanceUbuntu', {
       vpc,
       customAmiId: AmazonMachineImage.UBUNTU_20_04_ARM64.getImage(stack).imageId,
-      defaultInstanceType: new InstanceType('t4g.medium'),
+      defaultInstanceType: new ec2.InstanceType('t4g.medium'),
       keyName,
       blockDeviceMappings: [{ deviceName: '/dev/sda1', ebs: { volumeSize: 20 } }],
       additionalUserData: ['curl -fsSL https://get.docker.com -o get-docker.sh', 'sudo sh get-docker.sh'],

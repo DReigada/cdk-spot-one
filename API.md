@@ -64,18 +64,18 @@ new AmazonMachineImage()
 
 Name | Type | Description 
 -----|------|-------------
-*static* **AMAZON_LINUX** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
-*static* **AMAZON_LINUX_2** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
-*static* **CENTOS_7** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | CentOS product code from https://wiki.centos.org/Cloud/AWS.
-*static* **CENTOS_8** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
-*static* **UBUNTU_16_04_AMD64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
-*static* **UBUNTU_16_04_ARM64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
-*static* **UBUNTU_18_04_AMD64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
-*static* **UBUNTU_18_04_ARM64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
-*static* **UBUNTU_20_04_AMD64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
-*static* **UBUNTU_20_04_ARM64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
-*static* **UBUNTU_20_10_AMD64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
-*static* **UBUNTU_20_10_ARM64** | <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code> | <span></span>
+*static* **AMAZON_LINUX** | <code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code> | <span></span>
+*static* **AMAZON_LINUX_2** | <code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code> | <span></span>
+*static* **CENTOS_7** | <code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code> | CentOS product code from https://wiki.centos.org/Cloud/AWS.
+*static* **CENTOS_8** | <code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_16_04_AMD64** | <code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_16_04_ARM64** | <code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_18_04_AMD64** | <code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_18_04_ARM64** | <code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_20_04_AMD64** | <code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_20_04_ARM64** | <code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_20_10_AMD64** | <code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code> | <span></span>
+*static* **UBUNTU_20_10_ARM64** | <code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code> | <span></span>
 
 ### Methods
 
@@ -91,7 +91,7 @@ static fromSsmParameter(path: string): IMachineImage
 * **path** (<code>string</code>)  *No description*
 
 __Returns__:
-* <code>[IMachineImage](#aws-cdk-aws-ec2-imachineimage)</code>
+* <code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code>
 
 
 
@@ -134,8 +134,8 @@ __Returns__:
 
 
 
-__Implements__: [IConstruct](#constructs-iconstruct), [IConstruct](#aws-cdk-core-iconstruct), [IConstruct](#constructs-iconstruct), [IDependable](#aws-cdk-core-idependable)
-__Extends__: [Construct](#aws-cdk-core-construct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
+__Extends__: [Construct](#constructs-construct)
 
 ### Initializer
 
@@ -146,17 +146,17 @@ __Extends__: [Construct](#aws-cdk-core-construct)
 new LaunchTemplateResource(scope: Construct, id: string, props?: LaunchTemplateProps)
 ```
 
-* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
+* **scope** (<code>[Construct](#constructs-construct)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[LaunchTemplateProps](#cdk-spot-one-launchtemplateprops)</code>)  *No description*
-  * **blockDeviceMappings** (<code>Array<[CfnLaunchTemplate.BlockDeviceMappingProperty](#aws-cdk-aws-ec2-cfnlaunchtemplate-blockdevicemappingproperty)></code>)  blockDeviceMappings for config instance. __*Default*__: from ami config.
-  * **defaultInstanceType** (<code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code>)  *No description* __*Optional*__
-  * **iamInstanceProfile** (<code>[CfnInstanceProfile](#aws-cdk-aws-iam-cfninstanceprofile)</code>)  *No description* __*Optional*__
+  * **blockDeviceMappings** (<code>Array<[aws_ec2.CfnLaunchTemplate.BlockDeviceMappingProperty](#aws-cdk-lib-aws-ec2-cfnlaunchtemplate-blockdevicemappingproperty)></code>)  blockDeviceMappings for config instance. __*Default*__: from ami config.
+  * **defaultInstanceType** (<code>[aws_ec2.InstanceType](#aws-cdk-lib-aws-ec2-instancetype)</code>)  *No description* __*Optional*__
+  * **iamInstanceProfile** (<code>[aws_iam.CfnInstanceProfile](#aws-cdk-lib-aws-iam-cfninstanceprofile)</code>)  *No description* __*Optional*__
   * **imageId** (<code>string</code>)  *No description* __*Optional*__
-  * **instanceMarketOptions** (<code>[CfnLaunchTemplate.InstanceMarketOptionsProperty](#aws-cdk-aws-ec2-cfnlaunchtemplate-instancemarketoptionsproperty)</code>)  *No description* __*Optional*__
+  * **instanceMarketOptions** (<code>[aws_ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty](#aws-cdk-lib-aws-ec2-cfnlaunchtemplate-instancemarketoptionsproperty)</code>)  *No description* __*Optional*__
   * **keyName** (<code>string</code>)  *No description* __*Optional*__
-  * **securityGroup** (<code>Array<[ISecurityGroup](#aws-cdk-aws-ec2-isecuritygroup)></code>)  *No description* __*Optional*__
-  * **userData** (<code>[UserData](#aws-cdk-aws-ec2-userdata)</code>)  *No description* __*Optional*__
+  * **securityGroup** (<code>Array<[aws_ec2.ISecurityGroup](#aws-cdk-lib-aws-ec2-isecuritygroup)></code>)  *No description* __*Optional*__
+  * **userData** (<code>[aws_ec2.UserData](#aws-cdk-lib-aws-ec2-userdata)</code>)  *No description* __*Optional*__
 
 
 
@@ -165,8 +165,8 @@ new LaunchTemplateResource(scope: Construct, id: string, props?: LaunchTemplateP
 
 Name | Type | Description 
 -----|------|-------------
-**defaultInstanceType** | <code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code> | <span></span>
-**resource** | <code>[CfnLaunchTemplate](#aws-cdk-aws-ec2-cfnlaunchtemplate)</code> | <span></span>
+**defaultInstanceType** | <code>[aws_ec2.InstanceType](#aws-cdk-lib-aws-ec2-instancetype)</code> | <span></span>
+**resource** | <code>[aws_ec2.CfnLaunchTemplate](#aws-cdk-lib-aws-ec2-cfnlaunchtemplate)</code> | <span></span>
 
 
 
@@ -174,7 +174,7 @@ Name | Type | Description
 
 
 
-__Implements__: [IConstruct](#constructs-iconstruct), [IConstruct](#aws-cdk-core-iconstruct), [IConstruct](#constructs-iconstruct), [IDependable](#aws-cdk-core-idependable)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Extends__: [SpotOne](#cdk-spot-one-spotone)
 
 ### Initializer
@@ -186,24 +186,24 @@ __Extends__: [SpotOne](#cdk-spot-one-spotone)
 new SpotFleet(scope: Construct, id: string, props?: SpotFleetProps)
 ```
 
-* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
+* **scope** (<code>[Construct](#constructs-construct)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[SpotFleetProps](#cdk-spot-one-spotfleetprops)</code>)  *No description*
   * **additionalUserData** (<code>Array<string></code>)  Additional commands for user data. __*Default*__: no additional user data
   * **assignEip** (<code>boolean</code>)  Auto assign a new EIP on this instance if `eipAllocationId` is not defined. __*Default*__: true
   * **customAmiId** (<code>string</code>)  custom AMI ID. __*Default*__: The latest Amaozn Linux 2 AMI ID
-  * **defaultInstanceType** (<code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code>)  default EC2 instance type. __*Default*__: t3.large
+  * **defaultInstanceType** (<code>[aws_ec2.InstanceType](#aws-cdk-lib-aws-ec2-instancetype)</code>)  default EC2 instance type. __*Default*__: t3.large
   * **ebsVolumeSize** (<code>number</code>)  default EBS volume size for the spot instance. __*Default*__: 60;
   * **eipAllocationId** (<code>string</code>)  Allocation ID for your existing Elastic IP Address. __*Optional*__
   * **instanceInterruptionBehavior** (<code>[InstanceInterruptionBehavior](#cdk-spot-one-instanceinterruptionbehavior)</code>)  The behavior when a Spot Instance is interrupted. __*Default*__: InstanceInterruptionBehavior.TERMINATE
-  * **instanceProfile** (<code>[CfnInstanceProfile](#aws-cdk-aws-iam-cfninstanceprofile)</code>)  instance profile for the resource. __*Default*__: create a new one
-  * **instanceRole** (<code>[IRole](#aws-cdk-aws-iam-irole)</code>)  IAM role for the spot instance. __*Optional*__
+  * **instanceProfile** (<code>[aws_iam.CfnInstanceProfile](#aws-cdk-lib-aws-iam-cfninstanceprofile)</code>)  instance profile for the resource. __*Default*__: create a new one
+  * **instanceRole** (<code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code>)  IAM role for the spot instance. __*Optional*__
   * **keyName** (<code>string</code>)  SSH key name. __*Default*__: no ssh key will be assigned
-  * **securityGroup** (<code>[SecurityGroup](#aws-cdk-aws-ec2-securitygroup)</code>)  Security group for the spot fleet. __*Default*__: allows TCP 22 SSH ingress rule
+  * **securityGroup** (<code>[aws_ec2.SecurityGroup](#aws-cdk-lib-aws-ec2-securitygroup)</code>)  Security group for the spot fleet. __*Default*__: allows TCP 22 SSH ingress rule
   * **targetCapacity** (<code>number</code>)  number of the target capacity. __*Default*__: 1
-  * **vpc** (<code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code>)  VPC for the spot fleet. __*Default*__: new VPC will be created
-  * **vpcSubnet** (<code>[SubnetSelection](#aws-cdk-aws-ec2-subnetselection)</code>)  VPC subnet for the spot fleet. __*Default*__: public subnet
-  * **blockDeviceMappings** (<code>Array<[CfnLaunchTemplate.BlockDeviceMappingProperty](#aws-cdk-aws-ec2-cfnlaunchtemplate-blockdevicemappingproperty)></code>)  blockDeviceMappings for config instance. __*Default*__: from ami config.
+  * **vpc** (<code>[aws_ec2.IVpc](#aws-cdk-lib-aws-ec2-ivpc)</code>)  VPC for the spot fleet. __*Default*__: new VPC will be created
+  * **vpcSubnet** (<code>[aws_ec2.SubnetSelection](#aws-cdk-lib-aws-ec2-subnetselection)</code>)  VPC subnet for the spot fleet. __*Default*__: public subnet
+  * **blockDeviceMappings** (<code>Array<[aws_ec2.CfnLaunchTemplate.BlockDeviceMappingProperty](#aws-cdk-lib-aws-ec2-cfnlaunchtemplate-blockdevicemappingproperty)></code>)  blockDeviceMappings for config instance. __*Default*__: from ami config.
   * **blockDuration** (<code>[BlockDuration](#cdk-spot-one-blockduration)</code>)  reservce the spot instance as spot block with defined duration. __*Default*__: BlockDuration.ONE_HOUR
   * **terminateInstancesWithExpiration** (<code>boolean</code>)  terminate the instance when the allocation is expired. __*Default*__: true
   * **validFrom** (<code>string</code>)  the time when the spot fleet allocation starts. __*Default*__: no expiration
@@ -237,7 +237,7 @@ Name | Type | Description
 expireAfter(duration: Duration): void
 ```
 
-* **duration** (<code>[Duration](#aws-cdk-core-duration)</code>)  *No description*
+* **duration** (<code>[Duration](#aws-cdk-lib-duration)</code>)  *No description*
 
 
 
@@ -248,7 +248,7 @@ expireAfter(duration: Duration): void
 
 
 
-__Implements__: [IConstruct](#constructs-iconstruct), [IConstruct](#aws-cdk-core-iconstruct), [IConstruct](#constructs-iconstruct), [IDependable](#aws-cdk-core-idependable)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Extends__: [SpotOne](#cdk-spot-one-spotone)
 
 ### Initializer
@@ -260,24 +260,24 @@ __Extends__: [SpotOne](#cdk-spot-one-spotone)
 new SpotInstance(scope: Construct, id: string, props?: SpotInstanceProps)
 ```
 
-* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
+* **scope** (<code>[Construct](#constructs-construct)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[SpotInstanceProps](#cdk-spot-one-spotinstanceprops)</code>)  *No description*
   * **additionalUserData** (<code>Array<string></code>)  Additional commands for user data. __*Default*__: no additional user data
   * **assignEip** (<code>boolean</code>)  Auto assign a new EIP on this instance if `eipAllocationId` is not defined. __*Default*__: true
   * **customAmiId** (<code>string</code>)  custom AMI ID. __*Default*__: The latest Amaozn Linux 2 AMI ID
-  * **defaultInstanceType** (<code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code>)  default EC2 instance type. __*Default*__: t3.large
+  * **defaultInstanceType** (<code>[aws_ec2.InstanceType](#aws-cdk-lib-aws-ec2-instancetype)</code>)  default EC2 instance type. __*Default*__: t3.large
   * **ebsVolumeSize** (<code>number</code>)  default EBS volume size for the spot instance. __*Default*__: 60;
   * **eipAllocationId** (<code>string</code>)  Allocation ID for your existing Elastic IP Address. __*Optional*__
   * **instanceInterruptionBehavior** (<code>[InstanceInterruptionBehavior](#cdk-spot-one-instanceinterruptionbehavior)</code>)  The behavior when a Spot Instance is interrupted. __*Default*__: InstanceInterruptionBehavior.TERMINATE
-  * **instanceProfile** (<code>[CfnInstanceProfile](#aws-cdk-aws-iam-cfninstanceprofile)</code>)  instance profile for the resource. __*Default*__: create a new one
-  * **instanceRole** (<code>[IRole](#aws-cdk-aws-iam-irole)</code>)  IAM role for the spot instance. __*Optional*__
+  * **instanceProfile** (<code>[aws_iam.CfnInstanceProfile](#aws-cdk-lib-aws-iam-cfninstanceprofile)</code>)  instance profile for the resource. __*Default*__: create a new one
+  * **instanceRole** (<code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code>)  IAM role for the spot instance. __*Optional*__
   * **keyName** (<code>string</code>)  SSH key name. __*Default*__: no ssh key will be assigned
-  * **securityGroup** (<code>[SecurityGroup](#aws-cdk-aws-ec2-securitygroup)</code>)  Security group for the spot fleet. __*Default*__: allows TCP 22 SSH ingress rule
+  * **securityGroup** (<code>[aws_ec2.SecurityGroup](#aws-cdk-lib-aws-ec2-securitygroup)</code>)  Security group for the spot fleet. __*Default*__: allows TCP 22 SSH ingress rule
   * **targetCapacity** (<code>number</code>)  number of the target capacity. __*Default*__: 1
-  * **vpc** (<code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code>)  VPC for the spot fleet. __*Default*__: new VPC will be created
-  * **vpcSubnet** (<code>[SubnetSelection](#aws-cdk-aws-ec2-subnetselection)</code>)  VPC subnet for the spot fleet. __*Default*__: public subnet
-  * **blockDeviceMappings** (<code>Array<[CfnLaunchTemplate.BlockDeviceMappingProperty](#aws-cdk-aws-ec2-cfnlaunchtemplate-blockdevicemappingproperty)></code>)  blockDeviceMappings for config instance. __*Default*__: from ami config.
+  * **vpc** (<code>[aws_ec2.IVpc](#aws-cdk-lib-aws-ec2-ivpc)</code>)  VPC for the spot fleet. __*Default*__: new VPC will be created
+  * **vpcSubnet** (<code>[aws_ec2.SubnetSelection](#aws-cdk-lib-aws-ec2-subnetselection)</code>)  VPC subnet for the spot fleet. __*Default*__: public subnet
+  * **blockDeviceMappings** (<code>Array<[aws_ec2.CfnLaunchTemplate.BlockDeviceMappingProperty](#aws-cdk-lib-aws-ec2-cfnlaunchtemplate-blockdevicemappingproperty)></code>)  blockDeviceMappings for config instance. __*Default*__: from ami config.
 
 
 
@@ -295,8 +295,8 @@ Name | Type | Description
 
 
 
-__Implements__: [IConstruct](#constructs-iconstruct), [IConstruct](#aws-cdk-core-iconstruct), [IConstruct](#constructs-iconstruct), [IDependable](#aws-cdk-core-idependable)
-__Extends__: [Construct](#aws-cdk-core-construct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
+__Extends__: [Construct](#constructs-construct)
 __Implemented by__: [SpotFleet](#cdk-spot-one-spotfleet), [SpotInstance](#cdk-spot-one-spotinstance)
 
 ### Initializer
@@ -308,23 +308,23 @@ __Implemented by__: [SpotFleet](#cdk-spot-one-spotfleet), [SpotInstance](#cdk-sp
 new SpotOne(scope: Construct, id: string, props: SpotOneProps)
 ```
 
-* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
+* **scope** (<code>[Construct](#constructs-construct)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[SpotOneProps](#cdk-spot-one-spotoneprops)</code>)  *No description*
   * **additionalUserData** (<code>Array<string></code>)  Additional commands for user data. __*Default*__: no additional user data
   * **assignEip** (<code>boolean</code>)  Auto assign a new EIP on this instance if `eipAllocationId` is not defined. __*Default*__: true
   * **customAmiId** (<code>string</code>)  custom AMI ID. __*Default*__: The latest Amaozn Linux 2 AMI ID
-  * **defaultInstanceType** (<code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code>)  default EC2 instance type. __*Default*__: t3.large
+  * **defaultInstanceType** (<code>[aws_ec2.InstanceType](#aws-cdk-lib-aws-ec2-instancetype)</code>)  default EC2 instance type. __*Default*__: t3.large
   * **ebsVolumeSize** (<code>number</code>)  default EBS volume size for the spot instance. __*Default*__: 60;
   * **eipAllocationId** (<code>string</code>)  Allocation ID for your existing Elastic IP Address. __*Optional*__
   * **instanceInterruptionBehavior** (<code>[InstanceInterruptionBehavior](#cdk-spot-one-instanceinterruptionbehavior)</code>)  The behavior when a Spot Instance is interrupted. __*Default*__: InstanceInterruptionBehavior.TERMINATE
-  * **instanceProfile** (<code>[CfnInstanceProfile](#aws-cdk-aws-iam-cfninstanceprofile)</code>)  instance profile for the resource. __*Default*__: create a new one
-  * **instanceRole** (<code>[IRole](#aws-cdk-aws-iam-irole)</code>)  IAM role for the spot instance. __*Optional*__
+  * **instanceProfile** (<code>[aws_iam.CfnInstanceProfile](#aws-cdk-lib-aws-iam-cfninstanceprofile)</code>)  instance profile for the resource. __*Default*__: create a new one
+  * **instanceRole** (<code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code>)  IAM role for the spot instance. __*Optional*__
   * **keyName** (<code>string</code>)  SSH key name. __*Default*__: no ssh key will be assigned
-  * **securityGroup** (<code>[SecurityGroup](#aws-cdk-aws-ec2-securitygroup)</code>)  Security group for the spot fleet. __*Default*__: allows TCP 22 SSH ingress rule
+  * **securityGroup** (<code>[aws_ec2.SecurityGroup](#aws-cdk-lib-aws-ec2-securitygroup)</code>)  Security group for the spot fleet. __*Default*__: allows TCP 22 SSH ingress rule
   * **targetCapacity** (<code>number</code>)  number of the target capacity. __*Default*__: 1
-  * **vpc** (<code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code>)  VPC for the spot fleet. __*Default*__: new VPC will be created
-  * **vpcSubnet** (<code>[SubnetSelection](#aws-cdk-aws-ec2-subnetselection)</code>)  VPC subnet for the spot fleet. __*Default*__: public subnet
+  * **vpc** (<code>[aws_ec2.IVpc](#aws-cdk-lib-aws-ec2-ivpc)</code>)  VPC for the spot fleet. __*Default*__: new VPC will be created
+  * **vpcSubnet** (<code>[aws_ec2.SubnetSelection](#aws-cdk-lib-aws-ec2-subnetselection)</code>)  VPC subnet for the spot fleet. __*Default*__: public subnet
 
 
 
@@ -333,14 +333,14 @@ new SpotOne(scope: Construct, id: string, props: SpotOneProps)
 
 Name | Type | Description 
 -----|------|-------------
-**defaultInstanceType** | <code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code> | <span></span>
-**defaultSecurityGroup** | <code>[ISecurityGroup](#aws-cdk-aws-ec2-isecuritygroup)</code> | The default security group of the instance, which only allows TCP 22 SSH ingress rule.
+**defaultInstanceType** | <code>[aws_ec2.InstanceType](#aws-cdk-lib-aws-ec2-instancetype)</code> | <span></span>
+**defaultSecurityGroup** | <code>[aws_ec2.ISecurityGroup](#aws-cdk-lib-aws-ec2-isecuritygroup)</code> | The default security group of the instance, which only allows TCP 22 SSH ingress rule.
 **imageId** | <code>string</code> | <span></span>
-**userData** | <code>[UserData](#aws-cdk-aws-ec2-userdata)</code> | <span></span>
-**vpc** | <code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code> | <span></span>
+**userData** | <code>[aws_ec2.UserData](#aws-cdk-lib-aws-ec2-userdata)</code> | <span></span>
+**vpc** | <code>[aws_ec2.IVpc](#aws-cdk-lib-aws-ec2-ivpc)</code> | <span></span>
 **instanceId**? | <code>string</code> | __*Optional*__
-**instanceProfile**? | <code>[CfnInstanceProfile](#aws-cdk-aws-iam-cfninstanceprofile)</code> | __*Optional*__
-**instanceRole**? | <code>[IRole](#aws-cdk-aws-iam-irole)</code> | __*Optional*__
+**instanceProfile**? | <code>[aws_iam.CfnInstanceProfile](#aws-cdk-lib-aws-iam-cfninstanceprofile)</code> | __*Optional*__
+**instanceRole**? | <code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code> | __*Optional*__
 **instanceType**? | <code>string</code> | __*Optional*__
 
 ### Methods
@@ -358,17 +358,17 @@ protected associateEip(props: SpotOneProps): void
   * **additionalUserData** (<code>Array<string></code>)  Additional commands for user data. __*Default*__: no additional user data
   * **assignEip** (<code>boolean</code>)  Auto assign a new EIP on this instance if `eipAllocationId` is not defined. __*Default*__: true
   * **customAmiId** (<code>string</code>)  custom AMI ID. __*Default*__: The latest Amaozn Linux 2 AMI ID
-  * **defaultInstanceType** (<code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code>)  default EC2 instance type. __*Default*__: t3.large
+  * **defaultInstanceType** (<code>[aws_ec2.InstanceType](#aws-cdk-lib-aws-ec2-instancetype)</code>)  default EC2 instance type. __*Default*__: t3.large
   * **ebsVolumeSize** (<code>number</code>)  default EBS volume size for the spot instance. __*Default*__: 60;
   * **eipAllocationId** (<code>string</code>)  Allocation ID for your existing Elastic IP Address. __*Optional*__
   * **instanceInterruptionBehavior** (<code>[InstanceInterruptionBehavior](#cdk-spot-one-instanceinterruptionbehavior)</code>)  The behavior when a Spot Instance is interrupted. __*Default*__: InstanceInterruptionBehavior.TERMINATE
-  * **instanceProfile** (<code>[CfnInstanceProfile](#aws-cdk-aws-iam-cfninstanceprofile)</code>)  instance profile for the resource. __*Default*__: create a new one
-  * **instanceRole** (<code>[IRole](#aws-cdk-aws-iam-irole)</code>)  IAM role for the spot instance. __*Optional*__
+  * **instanceProfile** (<code>[aws_iam.CfnInstanceProfile](#aws-cdk-lib-aws-iam-cfninstanceprofile)</code>)  instance profile for the resource. __*Default*__: create a new one
+  * **instanceRole** (<code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code>)  IAM role for the spot instance. __*Optional*__
   * **keyName** (<code>string</code>)  SSH key name. __*Default*__: no ssh key will be assigned
-  * **securityGroup** (<code>[SecurityGroup](#aws-cdk-aws-ec2-securitygroup)</code>)  Security group for the spot fleet. __*Default*__: allows TCP 22 SSH ingress rule
+  * **securityGroup** (<code>[aws_ec2.SecurityGroup](#aws-cdk-lib-aws-ec2-securitygroup)</code>)  Security group for the spot fleet. __*Default*__: allows TCP 22 SSH ingress rule
   * **targetCapacity** (<code>number</code>)  number of the target capacity. __*Default*__: 1
-  * **vpc** (<code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code>)  VPC for the spot fleet. __*Default*__: new VPC will be created
-  * **vpcSubnet** (<code>[SubnetSelection](#aws-cdk-aws-ec2-subnetselection)</code>)  VPC subnet for the spot fleet. __*Default*__: public subnet
+  * **vpc** (<code>[aws_ec2.IVpc](#aws-cdk-lib-aws-ec2-ivpc)</code>)  VPC for the spot fleet. __*Default*__: new VPC will be created
+  * **vpcSubnet** (<code>[aws_ec2.SubnetSelection](#aws-cdk-lib-aws-ec2-subnetselection)</code>)  VPC subnet for the spot fleet. __*Default*__: public subnet
 
 
 
@@ -381,10 +381,10 @@ protected associateEip(props: SpotOneProps): void
 protected createInstanceProfile(role: IRole): CfnInstanceProfile
 ```
 
-* **role** (<code>[IRole](#aws-cdk-aws-iam-irole)</code>)  *No description*
+* **role** (<code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code>)  *No description*
 
 __Returns__:
-* <code>[CfnInstanceProfile](#aws-cdk-aws-iam-cfninstanceprofile)</code>
+* <code>[aws_iam.CfnInstanceProfile](#aws-cdk-lib-aws-iam-cfninstanceprofile)</code>
 
 #### protected createInstanceRole() <a id="cdk-spot-one-spotone-createinstancerole"></a>
 
@@ -396,7 +396,7 @@ protected createInstanceRole(): IRole
 
 
 __Returns__:
-* <code>[IRole](#aws-cdk-aws-iam-irole)</code>
+* <code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code>
 
 #### protected createSecurityGroup() <a id="cdk-spot-one-spotone-createsecuritygroup"></a>
 
@@ -408,7 +408,7 @@ protected createSecurityGroup(): SecurityGroup
 
 
 __Returns__:
-* <code>[SecurityGroup](#aws-cdk-aws-ec2-securitygroup)</code>
+* <code>[aws_ec2.SecurityGroup](#aws-cdk-lib-aws-ec2-securitygroup)</code>
 
 
 
@@ -416,8 +416,8 @@ __Returns__:
 
 
 
-__Implements__: [IConstruct](#constructs-iconstruct), [IConstruct](#aws-cdk-core-iconstruct), [IConstruct](#constructs-iconstruct), [IDependable](#aws-cdk-core-idependable), [ITaggable](#aws-cdk-core-itaggable)
-__Extends__: [Stack](#aws-cdk-core-stack)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable), [ITaggable](#aws-cdk-lib-itaggable)
+__Extends__: [Stack](#aws-cdk-lib-stack)
 
 ### Initializer
 
@@ -430,12 +430,12 @@ new VpcProvider(scope?: Construct, id?: string, props?: StackProps)
 
 * **scope** (<code>[Construct](#constructs-construct)</code>)  Parent of this stack, usually an `App` or a `Stage`, but could be any construct.
 * **id** (<code>string</code>)  The construct ID of this stack.
-* **props** (<code>[StackProps](#aws-cdk-core-stackprops)</code>)  Stack properties.
+* **props** (<code>[StackProps](#aws-cdk-lib-stackprops)</code>)  Stack properties.
   * **analyticsReporting** (<code>boolean</code>)  Include runtime versioning information in this Stack. __*Default*__: `analyticsReporting` setting of containing `App`, or value of 'aws:cdk:version-reporting' context key
   * **description** (<code>string</code>)  A description of the stack. __*Default*__: No description.
-  * **env** (<code>[Environment](#aws-cdk-core-environment)</code>)  The AWS environment (account/region) where this stack will be deployed. __*Default*__: The environment of the containing `Stage` if available, otherwise create the stack will be environment-agnostic.
+  * **env** (<code>[Environment](#aws-cdk-lib-environment)</code>)  The AWS environment (account/region) where this stack will be deployed. __*Default*__: The environment of the containing `Stage` if available, otherwise create the stack will be environment-agnostic.
   * **stackName** (<code>string</code>)  Name to deploy the stack with. __*Default*__: Derived from construct path.
-  * **synthesizer** (<code>[IStackSynthesizer](#aws-cdk-core-istacksynthesizer)</code>)  Synthesis method to use while deploying this stack. __*Default*__: `DefaultStackSynthesizer` if the `@aws-cdk/core:newStyleStackSynthesis` feature flag is set, `LegacyStackSynthesizer` otherwise.
+  * **synthesizer** (<code>[IStackSynthesizer](#aws-cdk-lib-istacksynthesizer)</code>)  Synthesis method to use while deploying this stack. __*Default*__: `DefaultStackSynthesizer` if the `@aws-cdk/core:newStyleStackSynthesis` feature flag is set, `LegacyStackSynthesizer` otherwise.
   * **tags** (<code>Map<string, string></code>)  Stack tags that will be applied to all the taggable resources and the stack itself. __*Default*__: {}
   * **terminationProtection** (<code>boolean</code>)  Whether to enable termination protection for this stack. __*Default*__: false
 
@@ -451,10 +451,10 @@ new VpcProvider(scope?: Construct, id?: string, props?: StackProps)
 static getOrCreate(scope: Construct): IVpc
 ```
 
-* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
+* **scope** (<code>[Construct](#constructs-construct)</code>)  *No description*
 
 __Returns__:
-* <code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code>
+* <code>[aws_ec2.IVpc](#aws-cdk-lib-aws-ec2-ivpc)</code>
 
 
 
@@ -469,23 +469,23 @@ Name | Type | Description
 -----|------|-------------
 **additionalUserData**? | <code>Array<string></code> | Additional commands for user data.<br/>__*Default*__: no additional user data
 **assignEip**? | <code>boolean</code> | Auto assign a new EIP on this instance if `eipAllocationId` is not defined.<br/>__*Default*__: true
-**blockDeviceMappings**? | <code>Array<[CfnLaunchTemplate.BlockDeviceMappingProperty](#aws-cdk-aws-ec2-cfnlaunchtemplate-blockdevicemappingproperty)></code> | blockDeviceMappings for config instance.<br/>__*Default*__: from ami config.
+**blockDeviceMappings**? | <code>Array<[aws_ec2.CfnLaunchTemplate.BlockDeviceMappingProperty](#aws-cdk-lib-aws-ec2-cfnlaunchtemplate-blockdevicemappingproperty)></code> | blockDeviceMappings for config instance.<br/>__*Default*__: from ami config.
 **blockDuration**? | <code>[BlockDuration](#cdk-spot-one-blockduration)</code> | reservce the spot instance as spot block with defined duration.<br/>__*Default*__: BlockDuration.ONE_HOUR
 **customAmiId**? | <code>string</code> | custom AMI ID.<br/>__*Default*__: The latest Amaozn Linux 2 AMI ID
-**defaultInstanceType**? | <code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code> | default EC2 instance type.<br/>__*Default*__: t3.large
+**defaultInstanceType**? | <code>[aws_ec2.InstanceType](#aws-cdk-lib-aws-ec2-instancetype)</code> | default EC2 instance type.<br/>__*Default*__: t3.large
 **ebsVolumeSize**? | <code>number</code> | default EBS volume size for the spot instance.<br/>__*Default*__: 60;
 **eipAllocationId**? | <code>string</code> | Allocation ID for your existing Elastic IP Address.<br/>__*Optional*__
 **instanceInterruptionBehavior**? | <code>[InstanceInterruptionBehavior](#cdk-spot-one-instanceinterruptionbehavior)</code> | The behavior when a Spot Instance is interrupted.<br/>__*Default*__: InstanceInterruptionBehavior.TERMINATE
-**instanceProfile**? | <code>[CfnInstanceProfile](#aws-cdk-aws-iam-cfninstanceprofile)</code> | instance profile for the resource.<br/>__*Default*__: create a new one
-**instanceRole**? | <code>[IRole](#aws-cdk-aws-iam-irole)</code> | IAM role for the spot instance.<br/>__*Optional*__
+**instanceProfile**? | <code>[aws_iam.CfnInstanceProfile](#aws-cdk-lib-aws-iam-cfninstanceprofile)</code> | instance profile for the resource.<br/>__*Default*__: create a new one
+**instanceRole**? | <code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code> | IAM role for the spot instance.<br/>__*Optional*__
 **keyName**? | <code>string</code> | SSH key name.<br/>__*Default*__: no ssh key will be assigned
-**securityGroup**? | <code>[SecurityGroup](#aws-cdk-aws-ec2-securitygroup)</code> | Security group for the spot fleet.<br/>__*Default*__: allows TCP 22 SSH ingress rule
+**securityGroup**? | <code>[aws_ec2.SecurityGroup](#aws-cdk-lib-aws-ec2-securitygroup)</code> | Security group for the spot fleet.<br/>__*Default*__: allows TCP 22 SSH ingress rule
 **targetCapacity**? | <code>number</code> | number of the target capacity.<br/>__*Default*__: 1
 **terminateInstancesWithExpiration**? | <code>boolean</code> | terminate the instance when the allocation is expired.<br/>__*Default*__: true
 **validFrom**? | <code>string</code> | the time when the spot fleet allocation starts.<br/>__*Default*__: no expiration
 **validUntil**? | <code>string</code> | the time when the spot fleet allocation expires.<br/>__*Default*__: no expiration
-**vpc**? | <code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code> | VPC for the spot fleet.<br/>__*Default*__: new VPC will be created
-**vpcSubnet**? | <code>[SubnetSelection](#aws-cdk-aws-ec2-subnetselection)</code> | VPC subnet for the spot fleet.<br/>__*Default*__: public subnet
+**vpc**? | <code>[aws_ec2.IVpc](#aws-cdk-lib-aws-ec2-ivpc)</code> | VPC for the spot fleet.<br/>__*Default*__: new VPC will be created
+**vpcSubnet**? | <code>[aws_ec2.SubnetSelection](#aws-cdk-lib-aws-ec2-subnetselection)</code> | VPC subnet for the spot fleet.<br/>__*Default*__: public subnet
 
 
 
@@ -521,14 +521,14 @@ __Returns__:
 
 Name | Type | Description 
 -----|------|-------------
-**blockDeviceMappings**? | <code>Array<[CfnLaunchTemplate.BlockDeviceMappingProperty](#aws-cdk-aws-ec2-cfnlaunchtemplate-blockdevicemappingproperty)></code> | blockDeviceMappings for config instance.<br/>__*Default*__: from ami config.
-**defaultInstanceType**? | <code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code> | __*Optional*__
-**iamInstanceProfile**? | <code>[CfnInstanceProfile](#aws-cdk-aws-iam-cfninstanceprofile)</code> | __*Optional*__
+**blockDeviceMappings**? | <code>Array<[aws_ec2.CfnLaunchTemplate.BlockDeviceMappingProperty](#aws-cdk-lib-aws-ec2-cfnlaunchtemplate-blockdevicemappingproperty)></code> | blockDeviceMappings for config instance.<br/>__*Default*__: from ami config.
+**defaultInstanceType**? | <code>[aws_ec2.InstanceType](#aws-cdk-lib-aws-ec2-instancetype)</code> | __*Optional*__
+**iamInstanceProfile**? | <code>[aws_iam.CfnInstanceProfile](#aws-cdk-lib-aws-iam-cfninstanceprofile)</code> | __*Optional*__
 **imageId**? | <code>string</code> | __*Optional*__
-**instanceMarketOptions**? | <code>[CfnLaunchTemplate.InstanceMarketOptionsProperty](#aws-cdk-aws-ec2-cfnlaunchtemplate-instancemarketoptionsproperty)</code> | __*Optional*__
+**instanceMarketOptions**? | <code>[aws_ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty](#aws-cdk-lib-aws-ec2-cfnlaunchtemplate-instancemarketoptionsproperty)</code> | __*Optional*__
 **keyName**? | <code>string</code> | __*Optional*__
-**securityGroup**? | <code>Array<[ISecurityGroup](#aws-cdk-aws-ec2-isecuritygroup)></code> | __*Optional*__
-**userData**? | <code>[UserData](#aws-cdk-aws-ec2-userdata)</code> | __*Optional*__
+**securityGroup**? | <code>Array<[aws_ec2.ISecurityGroup](#aws-cdk-lib-aws-ec2-isecuritygroup)></code> | __*Optional*__
+**userData**? | <code>[aws_ec2.UserData](#aws-cdk-lib-aws-ec2-userdata)</code> | __*Optional*__
 
 
 
@@ -558,25 +558,25 @@ Name | Type | Description
 -----|------|-------------
 **additionalUserData**? | <code>Array<string></code> | Additional commands for user data.<br/>__*Default*__: no additional user data
 **assignEip**? | <code>boolean</code> | Auto assign a new EIP on this instance if `eipAllocationId` is not defined.<br/>__*Default*__: true
-**blockDeviceMappings**? | <code>Array<[CfnLaunchTemplate.BlockDeviceMappingProperty](#aws-cdk-aws-ec2-cfnlaunchtemplate-blockdevicemappingproperty)></code> | blockDeviceMappings for config instance.<br/>__*Default*__: from ami config.
+**blockDeviceMappings**? | <code>Array<[aws_ec2.CfnLaunchTemplate.BlockDeviceMappingProperty](#aws-cdk-lib-aws-ec2-cfnlaunchtemplate-blockdevicemappingproperty)></code> | blockDeviceMappings for config instance.<br/>__*Default*__: from ami config.
 **blockDuration**? | <code>[BlockDuration](#cdk-spot-one-blockduration)</code> | reservce the spot instance as spot block with defined duration.<br/>__*Default*__: BlockDuration.ONE_HOUR
 **customAmiId**? | <code>string</code> | custom AMI ID.<br/>__*Default*__: The latest Amaozn Linux 2 AMI ID
-**defaultInstanceType**? | <code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code> | default EC2 instance type.<br/>__*Default*__: t3.large
+**defaultInstanceType**? | <code>[aws_ec2.InstanceType](#aws-cdk-lib-aws-ec2-instancetype)</code> | default EC2 instance type.<br/>__*Default*__: t3.large
 **ebsVolumeSize**? | <code>number</code> | default EBS volume size for the spot instance.<br/>__*Default*__: 60;
 **eipAllocationId**? | <code>string</code> | Allocation ID for your existing Elastic IP Address.<br/>__*Optional*__
 **instanceInterruptionBehavior**? | <code>[InstanceInterruptionBehavior](#cdk-spot-one-instanceinterruptionbehavior)</code> | The behavior when a Spot Instance is interrupted.<br/>__*Default*__: InstanceInterruptionBehavior.TERMINATE
 **instanceOnly**? | <code>boolean</code> | Whether to create spot instance only instead of a fleet.<br/>__*Default*__: false;
-**instanceProfile**? | <code>[CfnInstanceProfile](#aws-cdk-aws-iam-cfninstanceprofile)</code> | instance profile for the resource.<br/>__*Default*__: create a new one
-**instanceRole**? | <code>[IRole](#aws-cdk-aws-iam-irole)</code> | IAM role for the spot instance.<br/>__*Optional*__
+**instanceProfile**? | <code>[aws_iam.CfnInstanceProfile](#aws-cdk-lib-aws-iam-cfninstanceprofile)</code> | instance profile for the resource.<br/>__*Default*__: create a new one
+**instanceRole**? | <code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code> | IAM role for the spot instance.<br/>__*Optional*__
 **keyName**? | <code>string</code> | SSH key name.<br/>__*Default*__: no ssh key will be assigned
 **launchTemplate**? | <code>[ILaunchtemplate](#cdk-spot-one-ilaunchtemplate)</code> | Launch template for the spot fleet.<br/>__*Optional*__
-**securityGroup**? | <code>[SecurityGroup](#aws-cdk-aws-ec2-securitygroup)</code> | Security group for the spot fleet.<br/>__*Default*__: allows TCP 22 SSH ingress rule
+**securityGroup**? | <code>[aws_ec2.SecurityGroup](#aws-cdk-lib-aws-ec2-securitygroup)</code> | Security group for the spot fleet.<br/>__*Default*__: allows TCP 22 SSH ingress rule
 **targetCapacity**? | <code>number</code> | number of the target capacity.<br/>__*Default*__: 1
 **terminateInstancesWithExpiration**? | <code>boolean</code> | terminate the instance when the allocation is expired.<br/>__*Default*__: true
 **validFrom**? | <code>string</code> | the time when the spot fleet allocation starts.<br/>__*Default*__: no expiration
 **validUntil**? | <code>string</code> | the time when the spot fleet allocation expires.<br/>__*Default*__: no expiration
-**vpc**? | <code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code> | VPC for the spot fleet.<br/>__*Default*__: new VPC will be created
-**vpcSubnet**? | <code>[SubnetSelection](#aws-cdk-aws-ec2-subnetselection)</code> | VPC subnet for the spot fleet.<br/>__*Default*__: public subnet
+**vpc**? | <code>[aws_ec2.IVpc](#aws-cdk-lib-aws-ec2-ivpc)</code> | VPC for the spot fleet.<br/>__*Default*__: new VPC will be created
+**vpcSubnet**? | <code>[aws_ec2.SubnetSelection](#aws-cdk-lib-aws-ec2-subnetselection)</code> | VPC subnet for the spot fleet.<br/>__*Default*__: public subnet
 
 
 
@@ -591,19 +591,19 @@ Name | Type | Description
 -----|------|-------------
 **additionalUserData**? | <code>Array<string></code> | Additional commands for user data.<br/>__*Default*__: no additional user data
 **assignEip**? | <code>boolean</code> | Auto assign a new EIP on this instance if `eipAllocationId` is not defined.<br/>__*Default*__: true
-**blockDeviceMappings**? | <code>Array<[CfnLaunchTemplate.BlockDeviceMappingProperty](#aws-cdk-aws-ec2-cfnlaunchtemplate-blockdevicemappingproperty)></code> | blockDeviceMappings for config instance.<br/>__*Default*__: from ami config.
+**blockDeviceMappings**? | <code>Array<[aws_ec2.CfnLaunchTemplate.BlockDeviceMappingProperty](#aws-cdk-lib-aws-ec2-cfnlaunchtemplate-blockdevicemappingproperty)></code> | blockDeviceMappings for config instance.<br/>__*Default*__: from ami config.
 **customAmiId**? | <code>string</code> | custom AMI ID.<br/>__*Default*__: The latest Amaozn Linux 2 AMI ID
-**defaultInstanceType**? | <code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code> | default EC2 instance type.<br/>__*Default*__: t3.large
+**defaultInstanceType**? | <code>[aws_ec2.InstanceType](#aws-cdk-lib-aws-ec2-instancetype)</code> | default EC2 instance type.<br/>__*Default*__: t3.large
 **ebsVolumeSize**? | <code>number</code> | default EBS volume size for the spot instance.<br/>__*Default*__: 60;
 **eipAllocationId**? | <code>string</code> | Allocation ID for your existing Elastic IP Address.<br/>__*Optional*__
 **instanceInterruptionBehavior**? | <code>[InstanceInterruptionBehavior](#cdk-spot-one-instanceinterruptionbehavior)</code> | The behavior when a Spot Instance is interrupted.<br/>__*Default*__: InstanceInterruptionBehavior.TERMINATE
-**instanceProfile**? | <code>[CfnInstanceProfile](#aws-cdk-aws-iam-cfninstanceprofile)</code> | instance profile for the resource.<br/>__*Default*__: create a new one
-**instanceRole**? | <code>[IRole](#aws-cdk-aws-iam-irole)</code> | IAM role for the spot instance.<br/>__*Optional*__
+**instanceProfile**? | <code>[aws_iam.CfnInstanceProfile](#aws-cdk-lib-aws-iam-cfninstanceprofile)</code> | instance profile for the resource.<br/>__*Default*__: create a new one
+**instanceRole**? | <code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code> | IAM role for the spot instance.<br/>__*Optional*__
 **keyName**? | <code>string</code> | SSH key name.<br/>__*Default*__: no ssh key will be assigned
-**securityGroup**? | <code>[SecurityGroup](#aws-cdk-aws-ec2-securitygroup)</code> | Security group for the spot fleet.<br/>__*Default*__: allows TCP 22 SSH ingress rule
+**securityGroup**? | <code>[aws_ec2.SecurityGroup](#aws-cdk-lib-aws-ec2-securitygroup)</code> | Security group for the spot fleet.<br/>__*Default*__: allows TCP 22 SSH ingress rule
 **targetCapacity**? | <code>number</code> | number of the target capacity.<br/>__*Default*__: 1
-**vpc**? | <code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code> | VPC for the spot fleet.<br/>__*Default*__: new VPC will be created
-**vpcSubnet**? | <code>[SubnetSelection](#aws-cdk-aws-ec2-subnetselection)</code> | VPC subnet for the spot fleet.<br/>__*Default*__: public subnet
+**vpc**? | <code>[aws_ec2.IVpc](#aws-cdk-lib-aws-ec2-ivpc)</code> | VPC for the spot fleet.<br/>__*Default*__: new VPC will be created
+**vpcSubnet**? | <code>[aws_ec2.SubnetSelection](#aws-cdk-lib-aws-ec2-subnetselection)</code> | VPC subnet for the spot fleet.<br/>__*Default*__: public subnet
 
 
 
@@ -619,17 +619,17 @@ Name | Type | Description
 **additionalUserData**? | <code>Array<string></code> | Additional commands for user data.<br/>__*Default*__: no additional user data
 **assignEip**? | <code>boolean</code> | Auto assign a new EIP on this instance if `eipAllocationId` is not defined.<br/>__*Default*__: true
 **customAmiId**? | <code>string</code> | custom AMI ID.<br/>__*Default*__: The latest Amaozn Linux 2 AMI ID
-**defaultInstanceType**? | <code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code> | default EC2 instance type.<br/>__*Default*__: t3.large
+**defaultInstanceType**? | <code>[aws_ec2.InstanceType](#aws-cdk-lib-aws-ec2-instancetype)</code> | default EC2 instance type.<br/>__*Default*__: t3.large
 **ebsVolumeSize**? | <code>number</code> | default EBS volume size for the spot instance.<br/>__*Default*__: 60;
 **eipAllocationId**? | <code>string</code> | Allocation ID for your existing Elastic IP Address.<br/>__*Optional*__
 **instanceInterruptionBehavior**? | <code>[InstanceInterruptionBehavior](#cdk-spot-one-instanceinterruptionbehavior)</code> | The behavior when a Spot Instance is interrupted.<br/>__*Default*__: InstanceInterruptionBehavior.TERMINATE
-**instanceProfile**? | <code>[CfnInstanceProfile](#aws-cdk-aws-iam-cfninstanceprofile)</code> | instance profile for the resource.<br/>__*Default*__: create a new one
-**instanceRole**? | <code>[IRole](#aws-cdk-aws-iam-irole)</code> | IAM role for the spot instance.<br/>__*Optional*__
+**instanceProfile**? | <code>[aws_iam.CfnInstanceProfile](#aws-cdk-lib-aws-iam-cfninstanceprofile)</code> | instance profile for the resource.<br/>__*Default*__: create a new one
+**instanceRole**? | <code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code> | IAM role for the spot instance.<br/>__*Optional*__
 **keyName**? | <code>string</code> | SSH key name.<br/>__*Default*__: no ssh key will be assigned
-**securityGroup**? | <code>[SecurityGroup](#aws-cdk-aws-ec2-securitygroup)</code> | Security group for the spot fleet.<br/>__*Default*__: allows TCP 22 SSH ingress rule
+**securityGroup**? | <code>[aws_ec2.SecurityGroup](#aws-cdk-lib-aws-ec2-securitygroup)</code> | Security group for the spot fleet.<br/>__*Default*__: allows TCP 22 SSH ingress rule
 **targetCapacity**? | <code>number</code> | number of the target capacity.<br/>__*Default*__: 1
-**vpc**? | <code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code> | VPC for the spot fleet.<br/>__*Default*__: new VPC will be created
-**vpcSubnet**? | <code>[SubnetSelection](#aws-cdk-aws-ec2-subnetselection)</code> | VPC subnet for the spot fleet.<br/>__*Default*__: public subnet
+**vpc**? | <code>[aws_ec2.IVpc](#aws-cdk-lib-aws-ec2-ivpc)</code> | VPC for the spot fleet.<br/>__*Default*__: new VPC will be created
+**vpcSubnet**? | <code>[aws_ec2.SubnetSelection](#aws-cdk-lib-aws-ec2-subnetselection)</code> | VPC subnet for the spot fleet.<br/>__*Default*__: public subnet
 
 
 

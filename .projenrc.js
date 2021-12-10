@@ -1,11 +1,11 @@
-const { AwsCdkConstructLibrary, DevEnvironmentDockerImage, Gitpod, JsonFile } = require('projen');
+const { awscdk, DevEnvironmentDockerImage, Gitpod, JsonFile } = require('projen');
 
 const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
 
 const PROJECT_NAME = 'cdk-spot-one';
 const PROJECT_DESCRIPTION = 'One spot instance with EIP and defined duration. No interruption.';
 
-const project = new AwsCdkConstructLibrary({
+const project = new awscdk.AwsCdkConstructLibrary({
   authorName: 'Pahud Hsieh',
   authorEmail: 'pahudnet@gmail.com',
   name: PROJECT_NAME,
@@ -17,18 +17,23 @@ const project = new AwsCdkConstructLibrary({
     announce: false,
   },
   defaultReleaseBranch: 'main',
-  cdkVersion: '1.77.0',
-  cdkDependencies: [
-    '@aws-cdk/aws-iam',
-    '@aws-cdk/aws-ec2',
-    '@aws-cdk/aws-lambda',
-    '@aws-cdk/aws-logs',
-    '@aws-cdk/core',
-    '@aws-cdk/custom-resources',
-  ],
+  cdkVersion: '2.1.0',
+  /**
+   * we default release the main branch(cdkv2) with major version 2.
+   */
+  majorVersion: 2,
+  defaultReleaseBranch: 'main',
+  /**
+    * we also release the cdkv1 branch with major version 1.
+    */
+  releaseBranches: {
+    cdkv1: { npmDistTag: 'cdkv1', majorVersion: 1 },
+  },
+  workflowNodeVersion: '14.17.0',
   devDeps: [
     'aws-cdk',
     'ts-node',
+    '@aws-cdk/assert',
   ],
   depsUpgradeOptions: {
     ignoreProjen: false,

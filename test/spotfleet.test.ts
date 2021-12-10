@@ -1,6 +1,8 @@
-import * as ec2 from '@aws-cdk/aws-ec2';
-import * as iam from '@aws-cdk/aws-iam';
-import { App, Stack, Duration } from '@aws-cdk/core';
+import {
+  App, Stack, Duration,
+  aws_ec2 as ec2,
+  aws_iam as iam,
+} from 'aws-cdk-lib';
 import { SpotFleet, InstanceInterruptionBehavior } from '../src';
 import '@aws-cdk/assert/jest';
 import { BlockDuration } from '../src/spot';

@@ -1,5 +1,7 @@
-import * as ec2 from '@aws-cdk/aws-ec2';
-import { App, Stack } from '@aws-cdk/core';
+import {
+  App, Stack,
+  aws_ec2 as ec2,
+} from 'aws-cdk-lib';
 import { SpotInstance } from '../src';
 import '@aws-cdk/assert/jest';
 

@@ -1,10 +1,13 @@
 import * as path from 'path';
-import * as ec2 from '@aws-cdk/aws-ec2';
-import * as iam from '@aws-cdk/aws-iam';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as logs from '@aws-cdk/aws-logs';
-import { Construct, PhysicalName, Stack, Fn, CfnOutput, Duration, Lazy, CustomResource, Token } from '@aws-cdk/core';
-import * as cr from '@aws-cdk/custom-resources';
+import {
+  PhysicalName, Stack, Fn, CfnOutput, Duration, Lazy, CustomResource, Token,
+  aws_ec2 as ec2,
+  aws_iam as iam,
+  aws_lambda as lambda,
+  aws_logs as logs,
+  custom_resources as cr,
+} from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 
 const DEFAULT_INSTANCE_TYPE = 't3.large';
 

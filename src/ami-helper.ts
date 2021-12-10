@@ -1,4 +1,6 @@
-import * as ec2 from '@aws-cdk/aws-ec2';
+import {
+  aws_ec2 as ec2,
+} from 'aws-cdk-lib';
 
 export class AmazonMachineImage {
   public static readonly AMAZON_LINUX = ec2.MachineImage.latestAmazonLinux();

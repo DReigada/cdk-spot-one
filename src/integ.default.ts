@@ -1,5 +1,5 @@
-import { InstanceType } from '@aws-cdk/aws-ec2';
-import * as cdk from '@aws-cdk/core';
+import { aws_ec2 as ec2 } from 'aws-cdk-lib';
+import * as cdk from 'aws-cdk-lib';
 import { VpcProvider, SpotInstance } from './spot';
 
 export class IntegTesting {
@@ -28,7 +28,7 @@ export class IntegTesting {
       // instanceInterruptionBehavior: InstanceInterruptionBehavior.STOP,
       eipAllocationId: eipAllocationId,
       assignEip: false,
-      defaultInstanceType: new InstanceType(instanceType),
+      defaultInstanceType: new ec2.InstanceType(instanceType),
       keyName,
       ebsVolumeSize: volumeSize,
     });

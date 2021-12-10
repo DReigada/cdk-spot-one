@@ -7,6 +7,20 @@
 
 One spot instance with EIP and defined duration. No interruption.
 
+# Install
+
+Use the npm dist tag to opt in CDKv1 or CDKv2:
+
+```sh
+// for CDKv2
+npm install cdk-spot-one
+or
+npm install cdk-spot-one@latest
+
+// for CDKv1
+npm install cdk-spot-one@cdkv1 
+```
+
 # Why
 
 Sometimes we need an Amazon EC2 instance with static fixed IP for testing or development purpose for a duration of
