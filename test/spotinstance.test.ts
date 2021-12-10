@@ -2,8 +2,8 @@ import {
   App, Stack,
   aws_ec2 as ec2,
 } from 'aws-cdk-lib';
+import { Template } from 'aws-cdk-lib/assertions';
 import { SpotInstance } from '../src';
-import '@aws-cdk/assert/jest';
 
 describe('SpotInstance', () => {
   let mockApp: App;
@@ -16,7 +16,7 @@ describe('SpotInstance', () => {
 
   test('create single spot instance', () => {
     new SpotInstance(stack, 'SpotInstance', { ebsVolumeSize: 60 });
-    expect(stack).toHaveResourceLike('AWS::EC2::LaunchTemplate', {
+    Template.fromStack(stack).hasResourceProperties('AWS::EC2::LaunchTemplate', {
       LaunchTemplateData: {
         BlockDeviceMappings: [
           {
@@ -52,7 +52,7 @@ describe('SpotInstance', () => {
         },
       },
     });
-    expect(stack).toHaveResourceLike('AWS::EC2::Instance', {
+    Template.fromStack(stack).hasResourceProperties('AWS::EC2::Instance', {
       AvailabilityZone: {
         'Fn::Select': [
           0,
@@ -110,7 +110,7 @@ describe('SpotInstance Custom AMI ID', () => {
       blockDeviceMappings: [{ deviceName: '/dev/sda1', ebs: { volumeSize: 10 } }],
       additionalUserData: ['curl -fsSL https://get.docker.com -o get-docker.sh', 'sudo sh get-docker.sh'],
     });
-    expect(stack).toHaveResourceLike('AWS::EC2::LaunchTemplate', {
+    Template.fromStack(stack).hasResourceProperties('AWS::EC2::LaunchTemplate', {
       LaunchTemplateData: {
         BlockDeviceMappings: [
           {
@@ -152,7 +152,7 @@ describe('SpotInstance Custom AMI ID', () => {
         },
       },
     });
-    expect(stack).toHaveResourceLike('AWS::EC2::Instance', {
+    Template.fromStack(stack).hasResourceProperties('AWS::EC2::Instance', {
       AvailabilityZone: {
         'Fn::Select': [
           0,

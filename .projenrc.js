@@ -33,7 +33,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
   devDeps: [
     'aws-cdk',
     'ts-node',
-    '@aws-cdk/assert',
   ],
   depsUpgradeOptions: {
     ignoreProjen: false,
