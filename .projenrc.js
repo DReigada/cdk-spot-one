@@ -1,7 +1,5 @@
 const { awscdk, DevEnvironmentDockerImage, Gitpod, JsonFile } = require('projen');
 
-const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
-
 const PROJECT_NAME = 'cdk-spot-one';
 const PROJECT_DESCRIPTION = 'One spot instance with EIP and defined duration. No interruption.';
 
@@ -38,7 +36,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
     ignoreProjen: false,
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
-      secret: AUTOMATION_TOKEN,
     },
   },
   autoApproveOptions: {
