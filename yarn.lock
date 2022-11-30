@@ -1255,10 +1255,10 @@ aws-cdk-lib@2.1.0:
     semver "^7.3.5"
     yaml "1.10.2"
 
-aws-cdk@^1.181.0:
-  version "1.181.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-1.181.0.tgz#1bf6d259005d5f0818a4541268fd805fe30e82d3"
-  integrity sha512-bIiLIa7j//G+slqQa/7ue3xtnMehhwXyBcvLfyggLuRtkLI1PeR6UnUPKAUwXF0G6lADs+paI2P7np0imwho/Q==
+aws-cdk@^1.181.1:
+  version "1.181.1"
+  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-1.181.1.tgz#6e145831cb39e4be610d3cfa69c9419c7987e349"
+  integrity sha512-Ue7ScBZCWmjjb5fvjH4UM7Bd0YFmIFpJY/V9vWbSAemtcgObaKAtQ1uva0YeAkWl44CVzMUmnPBqDYBQFT/AJA==
   optionalDependencies:
     fsevents "2.3.2"
 
@@ -4367,9 +4367,9 @@ minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
     brace-expansion "^1.1.7"
 
 minimatch@^5.0.1, minimatch@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.1.0.tgz#1717b464f4971b144f6aabe8f2d0b8e4511e09c7"
-  integrity sha512-9TPBGGak4nHfGZsPBohm9AWg6NoT7QTCehS3BIJABslyZbzxfV78QM2Y6+i741OPZIafFAaiiEMh5OyIrJPgtg==
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.1.1.tgz#6c9dffcf9927ff2a31e74b5af11adf8b9604b022"
+  integrity sha512-362NP+zlprccbEt/SkxKfRMHnNY85V74mVnpUpNyr3F35covl09Kec7/sEFLt3RA4oXmewtoaanoIf67SE5Y5g==
   dependencies:
     brace-expansion "^2.0.1"
 
@@ -5022,10 +5022,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.65.38:
-  version "0.65.38"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.65.38.tgz#b4ace3302c0b119efcbff5c2ce536fb7eda1dd2a"
-  integrity sha512-hdjNwiwhTQQlcguNL4W5zTVeA2if+vFOgYXmuEnO5TDcmF6X1soppia0GNGFL5y3klaNUw8OUrfFYthds8aUPw==
+projen@^0.65.39:
+  version "0.65.39"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.65.39.tgz#f7f1b9084bc4324ff102c3d158c13d407288aaa1"
+  integrity sha512-MSnWss6F1qJQQVTJEAMW6+ylccOd+tnqERPqQuIeB/UFj0CIUZh5smAn8ZuJ8B9+sIXLlIwKA1BwoUQa5VsgYQ==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -6188,9 +6188,9 @@ validate-npm-package-name@^5.0.0:
     builtins "^5.0.0"
 
 vm2@^3.9.8:
-  version "3.9.11"
-  resolved "https://registry.yarnpkg.com/vm2/-/vm2-3.9.11.tgz#a880f510a606481719ec3f9803b940c5805a06fe"
-  integrity sha512-PFG8iJRSjvvBdisowQ7iVF580DXb1uCIiGaXgm7tynMR1uTBlv7UJlB1zdv5KJ+Tmq1f0Upnj3fayoEOPpCBKg==
+  version "3.9.12"
+  resolved "https://registry.yarnpkg.com/vm2/-/vm2-3.9.12.tgz#9bfa6d913a8b467861524e5a11c3b038cc967ec4"
+  integrity sha512-OMmRsKh1gmdosFzuqmj6O43hqIStqXA24YbwjtUTO0TkOBP8yLNHLplbr4odnAzEcMnm9lt2r3R8kTivn8urMg==
   dependencies:
     acorn "^8.7.0"
     acorn-walk "^8.2.0"
